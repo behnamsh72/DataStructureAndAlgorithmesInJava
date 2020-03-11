@@ -1,10 +1,10 @@
-package linkedlist;
+package linkedlist.singlelist;
 
 //Each node has and item and a reference to next node in list.
 public class ListNode {
 
-    int item;
-    ListNode next;
+    public int item;
+    public ListNode next;
 
     public ListNode(int item, ListNode next) {
         this.item = item;
@@ -26,7 +26,7 @@ public class ListNode {
 
     //disadvantages:
     //Finding the n th item of a linked list takes time proportional to n.n->length of list.
-    //(contant-time on array lists.)
+    //(constant-time on array lists.)
 
 
     public ListNode nth(int position) {

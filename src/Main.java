@@ -1,4 +1,4 @@
-import linkedlist.ListNode;
+import linkedlist.singlelist.ListNode;
 
 public class Main {
     public static void main(String[] args) {

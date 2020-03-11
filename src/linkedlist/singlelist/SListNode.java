@@ -1,4 +1,4 @@
-package linkedlist;
+package linkedlist.singlelist;
 
 public class SListNode {
 
