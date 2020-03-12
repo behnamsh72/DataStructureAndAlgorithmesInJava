@@ -17,6 +17,7 @@ public class DList {
     }
 
 
+
     /*
     DList invariants with sentinel:
     1-For  any Dlist d, d.head!=null. because we have a sentinel node

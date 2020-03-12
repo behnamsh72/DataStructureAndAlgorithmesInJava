@@ -1,0 +1,20 @@
+The STACK AND THE HEAP
+JAVA keeps most of the things that stores in variables and fields and elsewhere into different places 1-stack and 2-heap
+
+
+Heap:heap  stores all the objects with no exception, including arrays, and all class variables.
+
+Stack: stores all local variables, including parameters.
+
+when a method is called, Java creates  a stack frame(aka activation records)
+Stores the parameters &  local variables.
+
+one method can call another method and so on...
+and for that reason the jvm maintains an entire stack of stack frames.
+When method finishes, its stack frame is erased.
+
+Method:Thread.dumpstack() is a static method in thread class when whe called it's prints the all of the stack frames(in java.lang)
+
+Parameter passing in java:
+All parameters  by passed by value -Copied.
+method cannot change the originals
