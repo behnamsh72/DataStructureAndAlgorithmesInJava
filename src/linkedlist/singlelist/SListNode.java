@@ -2,11 +2,11 @@ package linkedlist.singlelist;
 
 public class SListNode {
 
-    public Object items;
+    public Object item;
     public SListNode next;
 
-    public SListNode(Object items, SListNode next) {
-        this.items = items;
+    public SListNode(Object item, SListNode next) {
+        this.item = item;
         this.next = next;
     }
     //2Problems with SListNodes
