@@ -1,0 +1,35 @@
+1-Modular testing:
+Test drivers & stubs:
+a-)Test drivers:Test drivers call the code, check the results of MyProgram class with the  method of test driver
+then we create a TestMyProgram class and this class has a main method and it this main method we called MyProgram.testDrivers().
+its better that we move Main method to test driver class
+
+b)Stubs:bits of code called by the code
+being tested.
+i)Fill in for missing method
+ii)Determine whether bug lies in calling method or called by replacing callee stub.
+iii)produce test data that real subroutines
+
+produce repeatable test data.
+
+
+2-Integration Testing:
+Define interfaces well! No ambignity in description of behaviour
+
+3-Result verification
+a)Data structure integrity checkers
+Inspect data structure & varifies that all invariants are satisfied.
+b)Algorithms result checker.
+
+
+Assertion:Code that tests an invariant or results example assert(x==3).
+if x==3 then keep on testing code but if x!=3 then stop test.
+turn them on: java -ea
+turn them off: java -da
+
+
+Regression testing:
+Regression test is suite  that can be re-run when changes are made.
+
+
+
