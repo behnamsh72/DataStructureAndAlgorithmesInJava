@@ -1,4 +1,4 @@
-package linkedlistdoublelist;
+package linkedlist.doublelist;
 
 public class DListNode {
     Object item;

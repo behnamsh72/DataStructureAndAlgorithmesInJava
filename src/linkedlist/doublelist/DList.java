@@ -1,6 +1,4 @@
-package linkedlistdoublelist;
-
-import java.util.concurrent.ConcurrentLinkedQueue;
+package linkedlist.doublelist;
 
 public class DList {
 
