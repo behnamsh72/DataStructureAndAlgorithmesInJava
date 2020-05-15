@@ -1,0 +1,64 @@
+HW3:
+Query every item... thetha(n^2) time.nth (i) time proportional to i.
+Hw4,Hw5:
+Allow application to hold a node
+QUERY All the items in linear time theta(n)
+
+
+hw5: slist & dlist well-encapsulated
+hw4:Dlist has flaws
+
+1-What if we l.remove(n) but the node n is in difference list than L?
+Hw4:size field of wrong list updated.
+Fix?
+
+ADT interface fix:
+remove(),insertAfter (), etc...
+should update the right list
+
+Implementation fix:Every node keeps a reference to list that contains it.
+Hw5:"myList field and it's solve the problem
+
+2-Should insert after, remove, etc be methods of List or ListNode?
+if we define remove, etc, in ListNode, we avoid question  1 . More elegant interface.
+
+
+                    List |  ListNode
+                isEmpty() | item()
+             insertFront()| next()
+             Front()      | remove()
+                          | insertAfter()
+                          |
+ Implementation fix:
+ Each node has  "myList"  Field,So we can update List's size field.
+
+ 3-What if we l.romove(n), then l.insetAfter(i,n)?
+ x->n->y  then we remove n so  x->y x.next==y , y.prev==x
+
+ Calling l.remove twice also corrupts size.
+ ADT interface fix:After n.remove(); n is an invalid node.Any attempt to use n causes an exception.
+
+ Implementation fix:
+ n.remove -> n.myList is set to null.
+ (marks n as invalid)
+ next & prev set  to null.
+
+ 4-What if we walk off end of list?(Using next().)
+ Adt interface answer:
+ Hw4 return null.
+ Hw5: returns invalid node instead.
+ *Provides consistently (next, remove)
+ n.next().item() ->if next is null then return InvalidNode exception
+ instead of NullPointer Exception.
+ Eliminate ambicuty.
+
+ Implementation answer:
+ Any sentinel is an invalid node.
+
+
+5-How do we can access an item?
+ADT interface answer:
+HW4:Node's item field is public
+HW5:protected; application's must use item() & setItem().
+Why ?
+Application can't Store items in deleted nodes or sentinels

@@ -1,0 +1,33 @@
+1-Assume both opponents are infinitely  intelligent
+2-Each grid is assigned a numerical score that indicates how we are about winning.
+assigned 1:computer is guaranteed a win.
+assigned -1:opponent is guaranteed a win
+assigned 0: if perfect players will draw.
+
+
+for tic tak toe:
+suppose computer is playing x:
+X 's in a row:1
+O 's in a row:-1'
+
+no empty square nobody has won:0
+
+Any other grid: computed by a minimax Algorithm
+
+
+solve:
+-consider each possible move
+- Determine each child grid
+- Score each child grid by calling minimax recursivly
+-Score parent grid.
+
+minimax algorithm:
+Computers turn:choose move that yiled to maximum score
+Opponent's turn:choose move that yield the minimum Score.
+
+
+//
+simple prunning:
+if a player discover a gauranted winning move, There's no reason to search for a better move.
+
+
