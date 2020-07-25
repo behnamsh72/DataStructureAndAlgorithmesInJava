@@ -1,0 +1,20 @@
+
+STACKS
+------
+Operations:
+ 1-"push" new item into top of stack.
+2-"pop" top item off stock (remove it).
+3-examine "top" item of stack.
+
+Easily implemented as singly-linked list.
+All operations take o(1) time.
+
+Sample application: Paranthesis matching
+{[(){[]}]()}
+Scan through String, char by char.
+-lefty--- {,[,(: push onto stack.
+righty: pop it's counter part off stack;
+check that they match.
+
+Mismatch or try to pop empty stack or stack not empty at end of String.
+parantheses not properly matches.

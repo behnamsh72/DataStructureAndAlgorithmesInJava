@@ -1,0 +1,38 @@
+Table of Important Big-Oh Sets
+
+Smallest to Largest
+        Function| commong name
+        O(1)     | constant
+
+       O(log n) | logarithmic
+
+       O(log^2 n) | log-squared
+
+       O(Sqrt(n)) | root-n
+
+       O(n)       | linear
+
+       O(n logn)  | -
+
+       O( n^2)    | quadratic
+
+       O(n^3)     | cubic
+
+       O(n^4)     | quartic
+
+       O(2^n)     | exponential
+
+       O( e ^2)   | exponential (but more so)
+
+       O (e^n)    |
+
+       O(n!)
+
+
+
+O(n log n) or faster time : considered efficient
+
+n^7 or slower time: considered useless.
+
+logarithmics:
+

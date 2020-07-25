@@ -1,0 +1,56 @@
+//
+Traversal:
+a manner of visiting each node in a tree once.
+
+PreOrderTraversals:
+visit each node before recursively visiting its children left to right.Root visited first
+
+
+    node visited:
+        1
+     2     6
+   3 4 5  7  8
+
+* each node visited only once,so a pre order traversals takes o(n) time when n is # of nodes in tree.
+
+Post Order traversals:
+    visit each nodes children(left - to - right) before the node itself;
+
+
+Binary trees: inOrder traversed:
+visit left child, then node , then right child.
+
+                +
+             *     ^
+           3  7   4  2
+
+      InOrder: (3*7 + 4^2)
+
+      PreOrder: + * 3 7 ^ 4 2
+
+      PostOrder: 3 7 * 4 2 ^ +
+
+
+     Level-Order traversal:
+
+     visit root, then all depth-1 nodes (left to right), then all depth-2 nodes, etc.
+
+     Level Order: " + * ^ 3 7 4 2"
+
+     this is not recursive
+
+     Use a queue, which initially contains only the root.
+     Repeat:
+            1- Deque a node
+            2-Visit it
+            3-Enqueue it's children ( left to right)
+
+            Until queue is empty
+
+          + * 3 7 4 2
+          - - - - - -
+            - - - - -
+              - - - -
+                - - -
+                  - -
+                    -

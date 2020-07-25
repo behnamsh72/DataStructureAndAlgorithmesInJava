@@ -7,6 +7,6 @@ public class Main {
 
 
         System.out.println(l1.nth(4).item);
-
+        Thread.dumpStack();
     }
 }

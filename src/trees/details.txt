@@ -1,0 +1,41 @@
+Tree:
+Set of nodes & edges that connect them.
+1-Exactly one path between and 2 nodes.
+
+Path: Connected sequence of edges
+
+Rooted Tree:
+one distinguished node is called root.
+Every node c, except root has one parent p,the first node on path from c to the root.
+
+C is p's child.
+Root has no parent.
+A node can have any  # of children.
+
+Leaf: Node with no children
+Sibling: Node with same parent
+Ancestors of a node d :
+nodes on path from d to root,including d, d's parent ,d's grandparent,... root.
+
+If a is an ancestor of d,then d is descesndant of a.
+Length of Path: # of edges in path.
+
+Depth of node n: length of path from n to root.
+(Depth of root is zero.)
+
+Height of a node n:
+length of path from n to its deepest descendent.
+(Height of any leaf is zero)
+
+Height of a tree:
+height of the root.
+
+subtree rooted at n:
+tree formed by n & its descendents.
+
+
+*
+A binary tree: no node has >2 children every child is a left child or a right child even if it's the only child.
+
+
+

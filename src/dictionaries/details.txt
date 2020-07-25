@@ -1,0 +1,98 @@
+Two-letter words & definitions
+Word is  a key that addresses the definition
+26*26 =676 different possible two-letter words
+Insert a definition to a dictionary"
+function hashCode(): maps each possible two-word(key) to a unique integer 0....675
+and then we use that integer to lookup  the word in the array
+(index into array)
+
+
+we need to be able pow(26,45) to use this technique to store every word in english language
+
+we need to be a little more be clever if want to store whole english language in dictionary
+and that's where hash Tables come in
+
+n: number of keys (words) stored.
+Table of N buckets.N a bit larger than n but and N is very smaller  than the possible number keys we could store.
+
+A hash table maps huge set of possible keys into N buckets by applying  a compression function to each hash code.
+
+h(hashCode)=hashCode mod N.
+h is the my compression function
+
+Collision: Several keys hash to same bucket, if h(hashCode1)=h(hashCode2).
+
+Chaining:each bucket references a linked list of entries, called a chain.
+
+but chaining creates a second problem:
+when I wanna lookup a word,how do i know which of these definitions belong to correspond word?
+answer:when i store this chain, I have to store not only the definition, i have to store the original words as well.
+
+Store each key in table with definition.
+
+entry=(key,value)
+
+defTable[]  -----> [ ][[ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+public Entry insert(key,value);
+*1-Compute the key's hash code.
+2-compress it to determine bucket.
+3-Insert the entry into bucket's chain.
+
+public Entry find(key)
+*Hash the key/
+*Search chain for entry with given key.
+*If found,return its.otherwise null.
+
+public Entry remove(key)
+1-Hash key.
+2-Search chain
+3-remove from chain if found.
+4-Return entry or null.
+
+Problem:what if we try to insert multiple copies of the same key into the dictionary.like maybe a word has two different definitions and we wanna put each  those definition into a seperate entry.
+How hash table handle it:
+2 entries with same key,2 approaches:
+
+1-G&T:
+insert both,find() arbitary returns one.
+2-Replace old value with new.Only one entry has given key.
+
+one of the important things that running time a hash table depends is how much stuff we try to pack or how big is hashtable.
+Load factor of  a hash table:n/N.
+n:is number of keys that we wanna store in the hash table.
+N:number of Buckets we have to store keys in.
+
+
+If  load factor stays low, and hashcode & compression function are "good", and no duplicate keys,Then the chains are short,
+& each operation takes constant time ->O(1).
+
+If load factor get BIG (n>>N), Theta(n) time.
+
+
+Hash Code &  compression functions:
+Key -----> HashCode ------compression function----> [0,N-1]
+
+Ideal: Map each key to a random bucket.
+
+Bad compression function:
+Suppose keys are ints.
+hashcode(i)=i.
+Compression function h(hashCode)=hashCode mod N.
+N=10000 buckets.
+Suppose keys are divisible by 4.
+h() is divisible by 4 too.
+bad news:
+Three quarters of buckets are never used at all!.we thought we had a hashtable of size 10000 but we have 2500.
+Same compression fn better if N is prime.
+
+Better way:h(hashCode)=((a*hashCode+b) mod p)mod N
+a,b,p are positive integers.
+p is large prime and p>>N.
+Now, N(buckets) doesn't need to be prime.
+
+
+Hash Codes:
+key->hash code ----Compression function> bucket 0...N-1
+
+Good hash code for Strings:
