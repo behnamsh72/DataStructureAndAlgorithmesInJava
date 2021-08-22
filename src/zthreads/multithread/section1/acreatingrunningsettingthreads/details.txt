@@ -1,0 +1,1 @@
+Thread has Id , Name, Priority( 1 to 10)  , Status(Thread.State Enumeration: New,Runnable,Blocked,Waiting,Timed_Waiting and Terminated)

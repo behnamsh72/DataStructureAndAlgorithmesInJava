@@ -1,9 +1,7 @@
 package trees.traversal;
-
-
 public class SibTreeNode {
 
-    public void preOrder() {
+/*    public void preOrder() {
         this.visit();
         if (firstChild != null) {
             firstChild.preOrder();
@@ -21,7 +19,7 @@ public class SibTreeNode {
         if(nextSibling!=null){
             nextSibling.postOrder();
         }
-    }
+    }*/
 }
 //Visit nodes in this order:
 
