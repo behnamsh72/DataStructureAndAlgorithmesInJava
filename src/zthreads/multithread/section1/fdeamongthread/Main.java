@@ -9,7 +9,9 @@ public class Main {
 
         //Creates the three writerTask and starts them
         WriterTask writer = new WriterTask(deque);
+        System.out.printf("Runtime available processors:%d", Runtime.getRuntime().availableProcessors());
         for (int i = 0; i < Runtime.getRuntime().availableProcessors(); i++) {
+
             Thread thread = new Thread(writer);
             thread.start();
         }

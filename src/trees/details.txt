@@ -37,5 +37,10 @@ tree formed by n & its descendents.
 *
 A binary tree: no node has >2 children every child is a left child or a right child even if it's the only child.
 
+ Representing Rooted trees:
 
+ G&T:Each node has 3 references :item,parent,children stored in a list.
+
+ Another option:
+ siblings are directly linked.
 
