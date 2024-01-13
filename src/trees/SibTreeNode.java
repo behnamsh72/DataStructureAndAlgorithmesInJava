@@ -8,6 +8,9 @@ public class SibTreeNode {
 
     private SibTreeNode parent;
 
+
+
+    //Left child
     private SibTreeNode firstChild;
 
     private SibTreeNode nextSibling;

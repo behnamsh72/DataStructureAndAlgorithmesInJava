@@ -1,0 +1,21 @@
+it's a little bit like a dictionary  in the sense that it also stores entries.
+
+ entry consist of a key and Associated value.
+ dictionary is used when we want to be able to lookup a particular key but a priority queue
+ is something completely different when we want to prioritize  entries and each key is going
+ to have either a numberical value or some other value that we can order like alphabetically or numerically.
+
+A total order is defined on the keys. and the operations that a priority queue allows you to do.
+there's 3 main ones.
+Operations:
+* Identify or remove entry whose key is lowest. (but no other entry)
+
+* Insert anything we want at any time.(Any key may be inserted at any time)
+
+Commonly used as "event queues" in simulation.
+the idea is that there's a bunch of entries on the queue the key associated with each entry is the
+time when the event is going to take place and the value associated with that key is what the
+event is a description of the event that will take place.
+
+Key is the time that the event takes place and the associated value is description of the event.
+
