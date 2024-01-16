@@ -3,7 +3,7 @@ it's a little bit like a dictionary  in the sense that it also stores entries.
  entry consist of a key and Associated value.
  dictionary is used when we want to be able to lookup a particular key but a priority queue
  is something completely different when we want to prioritize  entries and each key is going
- to have either a numberical value or some other value that we can order like alphabetically or numerically.
+ to have either a numerical value or some other value that we can order like alphabetically or numerically.
 
 A total order is defined on the keys. and the operations that a priority queue allows you to do.
 there's 3 main ones.
@@ -18,4 +18,16 @@ time when the event is going to take place and the value associated with that ke
 event is a description of the event that will take place.
 
 Key is the time that the event takes place and the associated value is description of the event.
+
+[4:wamp,7:going]----insert (k,v)-> [4:wamp,7:gang,5:hoot] ---removeMin()->[7:gong,5:hoot]
+
+insert method also returns to us entry object which has references to its key and it's value.
+and we can do remove min relatively quickly and that does two things first of all it updates the priority queue
+so that the minimum item is gone.
+and the other thing is as the return value it returns to us the complete entry (4,Womp) that just removed from the
+priority queue and then finally there's also a min operation which basically does the same thing except it doesn't actually change the priority queue.
+it just returns the smallest value in the priority queue and it returns again the full entry (key,value).
+
+commonly used as "event queues" in simulations.
+
 
